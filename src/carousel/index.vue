@@ -7,6 +7,7 @@
             <a href="javascript:;" :class="{active: currentPage == n}" v-for="n in imgs.length"></a>
         </div>
     </div>
+    
 </template>
 <script>
     import Transform from '../lib/transform'
