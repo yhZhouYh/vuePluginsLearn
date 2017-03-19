@@ -5,18 +5,18 @@ import App from './App.vue'
 
 const routes =  {
   '/': App,
-  '/carousel': require('./carousel.vue')
+  'carousel': require('./carousel.vue')
 }
 
 var vm = new Vue({
   el: '#app',
   data: {
-     currentRoute: window.location.pathname.replace('/vuePluginsLearn','')
+     currentRoute: window.location.hash?window.location.hash.replace('#',''): '/'
   },
   computed: {
     ViewComponent () {
       console.log(this.currentRoute)
-      return routes[this.currentRoute] || NotFound
+      return routes[this.currentRoute] || 'NotFound'
     }
   },
   // render: h => {
