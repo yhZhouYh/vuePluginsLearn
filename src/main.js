@@ -11,7 +11,7 @@ const routes =  {
 var vm = new Vue({
   el: '#app',
   data: {
-     currentRoute: window.location.pathname
+     currentRoute: window.location.pathname.replace('/vuePluginsLearn','')
   },
   computed: {
     ViewComponent () {
